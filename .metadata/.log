@@ -667,3 +667,83 @@ java.lang.NullPointerException
 
 !ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:47:15.491
 !MESSAGE  *** 4266 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 17:42:36.253
+!MESSAGE  *** 5207 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:43:30.474
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:43:30.556
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:43:30.742
+!MESSAGE Starting shell termination command "[kill, -9, 77638]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:43:30.747
+!MESSAGE Finished shell termination command "[kill, -9, 77638]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 17:46:52.638
+!MESSAGE  *** 4661 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:47:34.617
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:47:34.624
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:47:34.839
+!MESSAGE Starting shell termination command "[kill, -9, 85056]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 17:47:34.845
+!MESSAGE Finished shell termination command "[kill, -9, 85056]"
+
+!ENTRY org.mule.tooling.core 4 0 2020-04-27 17:51:02.005
+!MESSAGE There was a problem updating the cached tooling project for [Mule Project] Name: check-in-papi - Domain: default. Removing from cache.
+!STACK 1
+org.eclipse.core.runtime.CoreException: There was an error retrieving the current XML configuration for performing a DataSense operation
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:159)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.initializeToolingInfo(ToolingProjectFile.java:145)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.<init>(ToolingProjectFile.java:52)
+	at org.mule.tooling.runtime.tooling.ToolingProject.initializeProjectFile(ToolingProject.java:93)
+	at org.mule.tooling.runtime.tooling.ToolingProject.updateOpenFiles(ToolingProject.java:110)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:65)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:56)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateConfigFile(ToolingWorkspace.java:257)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$6(ToolingWorkspace.java:190)
+	at org.mule.tooling.runtime.tooling.ToolingProjectsCache.runWithToolingArtifactIfPresent(ToolingProjectsCache.java:77)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateCachedProject(ToolingWorkspace.java:161)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$5(ToolingWorkspace.java:152)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
+	at org.mule.tooling.core.cache.internal.MuleConfigurationsCacheMap.get(MuleConfigurationsCacheMap.java:56)
+	at org.mule.tooling.core.cache.internal.MuleConfigurationsCache.getConfigurationEntry(MuleConfigurationsCache.java:289)
+	at org.mule.tooling.core.cache.internal.MuleConfigurationsCache.getXmlConfigurationProvider(MuleConfigurationsCache.java:284)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:157)
+	... 14 more
+!SUBENTRY 1 org.mule.tooling.runtime 4 0 2020-04-27 17:51:02.007
+!MESSAGE There was an error retrieving the current XML configuration for performing a DataSense operation
+!STACK 0
+java.lang.NullPointerException
+	at java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
+	at org.mule.tooling.core.cache.internal.MuleConfigurationsCacheMap.get(MuleConfigurationsCacheMap.java:56)
+	at org.mule.tooling.core.cache.internal.MuleConfigurationsCache.getConfigurationEntry(MuleConfigurationsCache.java:289)
+	at org.mule.tooling.core.cache.internal.MuleConfigurationsCache.getXmlConfigurationProvider(MuleConfigurationsCache.java:284)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:157)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.initializeToolingInfo(ToolingProjectFile.java:145)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.<init>(ToolingProjectFile.java:52)
+	at org.mule.tooling.runtime.tooling.ToolingProject.initializeProjectFile(ToolingProject.java:93)
+	at org.mule.tooling.runtime.tooling.ToolingProject.updateOpenFiles(ToolingProject.java:110)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:65)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:56)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateConfigFile(ToolingWorkspace.java:257)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$6(ToolingWorkspace.java:190)
+	at org.mule.tooling.runtime.tooling.ToolingProjectsCache.runWithToolingArtifactIfPresent(ToolingProjectsCache.java:77)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateCachedProject(ToolingWorkspace.java:161)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$5(ToolingWorkspace.java:152)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
