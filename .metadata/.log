@@ -504,3 +504,6 @@ Caused by: java.net.UnknownHostException: studio-metrics-report.cloudhub.io: nod
 
 !ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:04:09.560
 !MESSAGE Finished shell termination command "[kill, -9, 58753]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:15:56.911
+!MESSAGE  *** 3288 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
