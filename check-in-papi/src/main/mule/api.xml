@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	
 	
-	<!-- API KIT ROUTER -->
+     <!-- API KIT ROUTER -->
      <flow name="api-main">
           <http:listener
                config-ref="apihttpListenerConfig"
@@ -31,7 +31,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
           <error-handler ref="api-main-error-handler" />
      </flow>
 	
-	<!-- API KIT CONSOLE -->
+     <!-- API KIT CONSOLE -->
      <flow name="api-console">
           <http:listener
                config-ref="apihttpListenerConfig"
@@ -48,7 +48,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
           <error-handler ref="api-console-error-handler" />
      </flow>
     
-    <!-- PUT on tickets/{PNR}/checkin -->
+     <!-- PUT on tickets/{PNR}/checkin -->
      <flow name="put:\tickets\(PNR)\checkin:application\json:apiConfig">
           <ee:transform>
                <ee:variables>
@@ -58,7 +58,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<flow-ref doc:name="check-in-by-pnr" doc:id="f30041d3-cdf5-49cb-a95f-ee6dc04e3a09" name="check-in-by-pnr" />
     </flow>
     
-    <!-- PUT on tickets/{PNR}paymentApproval -->
+     <!-- PUT on tickets/{PNR}paymentApproval -->
      <flow name="put:\tickets\(PNR)\paymentApproval:application\json:apiConfig">
           <ee:transform>
                <ee:variables>
@@ -68,7 +68,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<flow-ref doc:name="payment-approval-by-pnr" doc:id="7f67ff2d-b74f-4c68-8cd0-59f1282be41b" name="payment-approval-by-pnr" />
     </flow>
     
-    <!-- GET on tickets/{PNR} -->
+     <!-- GET on tickets/{PNR} -->
      <flow name="get:\tickets\(PNR):apiConfig">
           <ee:transform>
                <ee:variables>

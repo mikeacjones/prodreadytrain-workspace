@@ -9,7 +9,7 @@
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
 
 
-<!--  ROUTER ERROR HANDLER -->
+     <!--  ROUTER ERROR HANDLER -->
      <error-handler name="api-main-error-handler">
           <on-error-propagate type="APIKIT:BAD_REQUEST">
                <ee:transform>
@@ -92,7 +92,7 @@ output application/json
      </error-handler>
 
 
-<!--  CONSOLE ERROR HANDLER -->
+     <!--  CONSOLE ERROR HANDLER -->
      <error-handler name="api-console-error-handler">
           <on-error-propagate type="APIKIT:NOT_FOUND">
                <ee:transform>
