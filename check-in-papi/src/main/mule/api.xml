@@ -11,6 +11,9 @@
 http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd
 http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	
+	
+	<!-- API KIT ROUTER -->
 	<flow name="api-main">
         <http:listener config-ref="apihttpListenerConfig" path="/api/v1/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
@@ -22,87 +25,10 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
             </http:error-response>
         </http:listener>
         <apikit:router config-ref="apiConfig" />
-        <error-handler>
-            <on-error-propagate type="APIKIT:BAD_REQUEST">
-                <ee:transform>
-                    <ee:message>
-                        <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{message: "Bad request"}]]></ee:set-payload>
-                    </ee:message>
-                    <ee:variables>
-                        <ee:set-variable variableName="httpStatus">400</ee:set-variable>
-                    </ee:variables>
-                </ee:transform>
-            </on-error-propagate>
-            <on-error-propagate type="APIKIT:NOT_FOUND">
-                <ee:transform>
-                    <ee:message>
-                        <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{message: "Resource not found"}]]></ee:set-payload>
-                    </ee:message>
-                    <ee:variables>
-                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
-                    </ee:variables>
-                </ee:transform>
-            </on-error-propagate>
-            <on-error-propagate type="APIKIT:METHOD_NOT_ALLOWED">
-                <ee:transform>
-                    <ee:message>
-                        <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{message: "Method not allowed"}]]></ee:set-payload>
-                    </ee:message>
-                    <ee:variables>
-                        <ee:set-variable variableName="httpStatus">405</ee:set-variable>
-                    </ee:variables>
-                </ee:transform>
-            </on-error-propagate>
-            <on-error-propagate type="APIKIT:NOT_ACCEPTABLE">
-                <ee:transform>
-                    <ee:message>
-                        <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{message: "Not acceptable"}]]></ee:set-payload>
-                    </ee:message>
-                    <ee:variables>
-                        <ee:set-variable variableName="httpStatus">406</ee:set-variable>
-                    </ee:variables>
-                </ee:transform>
-            </on-error-propagate>
-            <on-error-propagate type="APIKIT:UNSUPPORTED_MEDIA_TYPE">
-                <ee:transform>
-                    <ee:message>
-                        <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{message: "Unsupported media type"}]]></ee:set-payload>
-                    </ee:message>
-                    <ee:variables>
-                        <ee:set-variable variableName="httpStatus">415</ee:set-variable>
-                    </ee:variables>
-                </ee:transform>
-            </on-error-propagate>
-            <on-error-propagate type="APIKIT:NOT_IMPLEMENTED">
-                <ee:transform>
-                    <ee:message>
-                        <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{message: "Not Implemented"}]]></ee:set-payload>
-                    </ee:message>
-                    <ee:variables>
-                        <ee:set-variable variableName="httpStatus">501</ee:set-variable>
-                    </ee:variables>
-                </ee:transform>
-            </on-error-propagate>
-        </error-handler>
+        <error-handler ref="api-main-error-handler" />
     </flow>
+	
+	<!-- API KIT CONSOLE -->
 	<flow name="api-console">
         <http:listener config-ref="apihttpListenerConfig" path="/console/v1/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
@@ -114,22 +40,10 @@ output application/json
             </http:error-response>
         </http:listener>
         <apikit:console config-ref="apiConfig" />
-        <error-handler>
-            <on-error-propagate type="APIKIT:NOT_FOUND">
-                <ee:transform>
-                    <ee:message>
-                        <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{message: "Resource not found"}]]></ee:set-payload>
-                    </ee:message>
-                    <ee:variables>
-                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
-                    </ee:variables>
-                </ee:transform>
-            </on-error-propagate>
-        </error-handler>
+        <error-handler ref="api-console-error-handler" />
     </flow>
+    
+    <!-- PUT on tickets/{PNR}/checkin -->
     <flow name="put:\tickets\(PNR)\checkin:application\json:apiConfig">
         <ee:transform>
             <ee:variables>
@@ -147,6 +61,8 @@ output application/json
             </ee:message>
         </ee:transform>
     </flow>
+    
+    <!-- PUT on tickets/{PNR}paymentApproval -->
     <flow name="put:\tickets\(PNR)\paymentApproval:application\json:apiConfig">
         <ee:transform>
             <ee:variables>
@@ -175,6 +91,8 @@ output application/json
             </ee:message>
         </ee:transform>
     </flow>
+    
+    <!-- GET on tickets/{PNR} -->
     <flow name="get:\tickets\(PNR):apiConfig">
         <ee:transform>
             <ee:variables>
@@ -203,4 +121,6 @@ output application/json
             </ee:message>
         </ee:transform>
     </flow>
+
+
 </mule>
