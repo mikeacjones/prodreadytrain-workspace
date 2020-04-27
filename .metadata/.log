@@ -783,3 +783,36 @@ java.lang.NullPointerException
 
 !ENTRY org.mule.tooling.core 2 0 2020-04-27 18:44:13.573
 !MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 18:49:24.192
+!MESSAGE  *** 4333 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:51:50.072
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:51:50.078
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:51:50.224
+!MESSAGE Starting shell termination command "[kill, -9, 93382]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:51:50.228
+!MESSAGE Finished shell termination command "[kill, -9, 93382]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 18:51:56.950
+!MESSAGE  *** 4364 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:52:35.676
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:52:35.681
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:52:35.829
+!MESSAGE Starting shell termination command "[kill, -9, 93937]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:52:35.834
+!MESSAGE Finished shell termination command "[kill, -9, 93937]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 18:53:50.045
+!MESSAGE  *** 4121 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]

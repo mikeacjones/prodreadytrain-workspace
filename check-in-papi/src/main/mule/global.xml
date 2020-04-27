@@ -26,7 +26,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
      <!-- API KIT CONFIGURATION -->
      <apikit:config
           name="apiConfig"
-          api="resource::af6f1673-4a91-43e3-92bc-955b296d66d8:check-in-papi:1.0.0:raml:zip:api.raml"
+          api="${api.spec}"
           outboundHeadersMapName="outboundHeaders"
           httpStatusVarName="httpStatus" />
 	
@@ -38,7 +38,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
           <tls:key-store
                type="${tls.keystore.type}"
                path="${tls.keystore.path}"
-               alias="${tls.keystore.server}"
+               alias="${tls.keystore.alias}"
                keyPassword="${tls.keystore.password}"
                password="${tls.keystore.keyPassword}" />
      </tls:context>
