@@ -750,3 +750,6 @@ java.lang.NullPointerException
 
 !ENTRY org.mule.tooling.maven 1 0 2020-04-27 18:11:15.188
 !MESSAGE  *** 3287 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 18:18:47.320
+!MESSAGE  *** 2886 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
