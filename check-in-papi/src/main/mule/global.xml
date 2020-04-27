@@ -45,7 +45,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 	
      <!-- AUTO DISCOVERY CONFIG -->
      <api-gateway:autodiscovery
-          apiId="16123611"
+          apiId="${api.id}"
           doc:name="API Autodiscovery"
           doc:id="71e99bed-65b8-40da-a978-fdc547e2fa14"
           flowRef="api-main" />

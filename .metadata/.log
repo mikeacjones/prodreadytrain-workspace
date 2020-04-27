@@ -816,3 +816,12 @@ java.lang.NullPointerException
 
 !ENTRY org.mule.tooling.maven 1 0 2020-04-27 18:53:50.045
 !MESSAGE  *** 4121 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 19:00:56.553
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 19:00:56.559
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 19:01:09.696
+!MESSAGE  *** 4400 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
