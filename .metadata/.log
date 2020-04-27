@@ -203,3 +203,133 @@ java.lang.NullPointerException
 
 !ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-27 12:33:48.958
 !MESSAGE Deleting MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+!SESSION 2020-04-27 12:51:42.687 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/mjones1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/mjones1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-04-27 12:51:48.708
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-27 12:51:51.039
+!MESSAGE Creating MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-27 12:51:54.355
+!MESSAGE Mule Version 4.2.2-hf2, was mapped to Tooling Version 4.2.2-hf2
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-27 12:52:03.218
+!MESSAGE Started tooling v[4.2.2] with timeout [90s] at path:
+/Applications/AnypointStudio.app/Contents/Eclipse/configuration/org.eclipse.osgi/430/data/.runtimes/tooling-bgeuago5
+
+!ENTRY org.eclipse.jface 2 0 2020-04-27 12:52:04.687
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-04-27 12:52:04.687
+!MESSAGE A conflict occurred for COMMAND+F:
+Binding(COMMAND+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@eb77241,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@197da701,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(COMMAND+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@35fd03d9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-27 12:53:44.556
+!MESSAGE Deleting MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+!SESSION 2020-04-27 12:55:11.377 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/mjones1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/mjones1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-04-27 12:55:16.892
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-27 12:55:19.184
+!MESSAGE Creating MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+
+!ENTRY org.eclipse.jface 2 0 2020-04-27 12:55:19.825
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-04-27 12:55:19.825
+!MESSAGE A conflict occurred for COMMAND+F:
+Binding(COMMAND+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@49b73e6c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f138b74,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(COMMAND+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c682826,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-27 12:55:22.604
+!MESSAGE Mule Version 4.2.2-hf2, was mapped to Tooling Version 4.2.2-hf2
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-27 12:55:31.624
+!MESSAGE Started tooling v[4.2.2] with timeout [90s] at path:
+/Applications/AnypointStudio.app/Contents/Eclipse/configuration/org.eclipse.osgi/430/data/.runtimes/tooling-smxdgrly
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-27 13:22:48.972
+!MESSAGE Deleting MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+!SESSION 2020-04-27 13:36:51.076 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/mjones1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/mjones1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-04-27 13:36:56.452
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-27 13:36:58.829
+!MESSAGE Creating MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-27 13:37:02.800
+!MESSAGE Mule Version 4.2.2-hf2, was mapped to Tooling Version 4.2.2-hf2
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-27 13:37:12.391
+!MESSAGE Started tooling v[4.2.2] with timeout [90s] at path:
+/Applications/AnypointStudio.app/Contents/Eclipse/configuration/org.eclipse.osgi/430/data/.runtimes/tooling-kwjlczpc
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-27 14:22:42.166
+!MESSAGE Tooling workspace is /Users/mjones1/AnypointStudio/prodreadytrain-workspace/.tooling-apps-cache
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 14:22:48.063
+!MESSAGE  *** 5751 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
