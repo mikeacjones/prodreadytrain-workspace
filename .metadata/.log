@@ -768,3 +768,18 @@ java.lang.NullPointerException
 
 !ENTRY org.mule.tooling.runtime 1 0 2020-04-27 18:25:29.454
 !MESSAGE Finished shell termination command "[kill, -9, 91096]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 18:43:44.277
+!MESSAGE  *** 3682 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 18:43:52.505
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 18:43:52.691
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 18:44:13.369
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 18:44:13.573
+!MESSAGE Couldn't parse DW script as KeyValue pairs
