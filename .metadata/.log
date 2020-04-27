@@ -507,3 +507,78 @@ Caused by: java.net.UnknownHostException: studio-metrics-report.cloudhub.io: nod
 
 !ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:15:56.911
 !MESSAGE  *** 3288 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:21:46.642
+!MESSAGE  *** 4034 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:23:53.272
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:23:53.279
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:23:53.480
+!MESSAGE Starting shell termination command "[kill, -9, 73834]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:23:53.488
+!MESSAGE Finished shell termination command "[kill, -9, 73834]"
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 16:23:55.540
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 16:23:55.761
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 16:24:14.061
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-27 16:24:14.278
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:24:24.958
+!MESSAGE  *** 4039 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:25:46.443
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:25:46.449
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:25:46.592
+!MESSAGE Starting shell termination command "[kill, -9, 74199]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:25:46.596
+!MESSAGE Finished shell termination command "[kill, -9, 74199]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:25:53.758
+!MESSAGE  *** 3270 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:29:18.772
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:29:18.779
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:29:18.935
+!MESSAGE Starting shell termination command "[kill, -9, 74817]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:29:18.940
+!MESSAGE Finished shell termination command "[kill, -9, 74817]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:29:38.882
+!MESSAGE  *** 3545 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:35:07.235
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:35:07.241
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:35:07.397
+!MESSAGE Starting shell termination command "[kill, -9, 75428]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-27 16:35:07.402
+!MESSAGE Finished shell termination command "[kill, -9, 75428]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-27 16:35:15.960
+!MESSAGE  *** 4490 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
