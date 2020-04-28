@@ -48,7 +48,7 @@
                             <workers>1</workers>
                             <workerType>MICRO</workerType>
                             <objectStoreV2>true</objectStoreV2>
-                            <applicationName>mjones1-${project.artifactId}-dev</applicationName>
+                            <applicationName>mjones1-${project.artifactId}-${env}</applicationName>
                             <deploymentTimeout>600000</deploymentTimeout>
                             <properties>
                                 <anypoint.platform.client_id>${ap.client_id}</anypoint.platform.client_id>

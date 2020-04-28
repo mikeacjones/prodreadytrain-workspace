@@ -2,17 +2,7 @@
 https:
   host: "0.0.0.0"
   port: "8082"
-  
- 
-# TLS Properties
-tls:
-  keystore:
-    type: "pkcs12"
-    path: "certs/check-in-papi-dev.p12"
-    alias: "server"
-    password: "mule12345"
-    keyPassword: "mule12345"
-    
+
     
 # Check-in PAPI Properties
 # resource::af6f1673-4a91-43e3-92bc-955b296d66d8:check-in-papi:1.0.0:raml:zip:api.raml
@@ -22,4 +12,3 @@ api:
   version: "${api.version}"
   spec: "resource::${api.groupId}:${api.artifactId}:${api.version}:raml:zip:api.raml"
   majorVersion: "v1"
-  id: "16123611"
