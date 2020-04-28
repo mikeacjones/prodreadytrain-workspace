@@ -1,0 +1,14 @@
+# HTTPS Properties
+https:
+  host: "0.0.0.0"
+  port: "8082"
+
+    
+# Check-in PAPI Properties
+# resource::af6f1673-4a91-43e3-92bc-955b296d66d8:check-in-papi:1.0.0:raml:zip:api.raml
+api:
+  groupId: "af6f1673-4a91-43e3-92bc-955b296d66d8"
+  artifactId: "check-in-papi"
+  version: "1.0.0"
+  spec: "resource::af6f1673-4a91-43e3-92bc-955b296d66d8:check-in-papi:1.0.0:raml:zip:api.raml"
+  majorVersion: "v1"

@@ -8,8 +8,7 @@
     xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway"
     xmlns="http://www.mulesoft.org/schema/mule/core"
     xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd 
 http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd 
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd 
@@ -41,8 +40,8 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
             type="${tls.keystore.type}"
             path="${tls.keystore.path}"
             alias="${tls.keystore.alias}"
-            keyPassword="${secure::tls.keystore.password}"
-            password="${secure::tls.keystore.keyPassword}" />
+            keyPassword="${tls.keystore.password}"
+            password="${tls.keystore.keyPassword}" />
     </tls:context>
 	
     <!-- AUTO DISCOVERY CONFIG -->
@@ -63,12 +62,8 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
         file="properties.yaml" />
         
     <!--  GLOBAL PROPERTIES  -->
-    <global-property
-        doc:name="Global Property"
-        doc:id="9b3c94c6-b7fe-4697-b03d-7f17b60fd800"
-        name="env"
-        value="dev" />
-    <secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="60400b79-eca1-4631-b733-22c0dc7a6a14" file="properties-${env}-secure.yaml" key="${encrypt.key}" >
+    <global-property doc:name="Global Property" doc:id="9b3c94c6-b7fe-4697-b03d-7f17b60fd800" name="env" value="dev"/>
+    <secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="60400b79-eca1-4631-b733-22c0dc7a6a14" file="properties-${env}-secure.yaml" key="${encrypt.key}">
         <secure-properties:encrypt algorithm="Blowfish" />
     </secure-properties:config>
 </mule>
