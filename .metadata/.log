@@ -852,3 +852,26 @@ java.lang.NullPointerException
 
 !ENTRY org.mule.tooling.runtime 1 0 2020-04-27 19:04:36.215
 !MESSAGE Finished shell termination command "[kill, -9, 95491]"
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-27 19:06:56.386
+!MESSAGE Deleting MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+!SESSION 2020-04-28 11:02:41.337 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/mjones1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/mjones1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-04-28 11:02:46.648
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-28 11:02:49.241
+!MESSAGE Creating MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-28 11:02:55.609
+!MESSAGE Mule Version 4.2.2-hf2, was mapped to Tooling Version 4.2.2-hf2
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-28 11:03:07.620
+!MESSAGE Started tooling v[4.2.2] with timeout [90s] at path:
+/Applications/AnypointStudio.app/Contents/Eclipse/configuration/org.eclipse.osgi/430/data/.runtimes/tooling-kwjlczpc
