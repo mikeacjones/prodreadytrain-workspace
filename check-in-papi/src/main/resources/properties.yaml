@@ -17,9 +17,9 @@ tls:
 # Check-in PAPI Properties
 # resource::af6f1673-4a91-43e3-92bc-955b296d66d8:check-in-papi:1.0.0:raml:zip:api.raml
 api:
-  groupId: "af6f1673-4a91-43e3-92bc-955b296d66d8"
-  artifactId: "check-in-papi"
-  version: "1.0.0"
+  groupId: "${api.groupId}"
+  artifactId: "${api.artifactId}"
+  version: "${api.version}"
   spec: "resource::${api.groupId}:${api.artifactId}:${api.version}:raml:zip:api.raml"
   majorVersion: "v1"
   id: "16123611"

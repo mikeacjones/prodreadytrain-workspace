@@ -875,3 +875,616 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/mjone
 !ENTRY org.mule.tooling.core 1 0 2020-04-28 11:03:07.620
 !MESSAGE Started tooling v[4.2.2] with timeout [90s] at path:
 /Applications/AnypointStudio.app/Contents/Eclipse/configuration/org.eclipse.osgi/430/data/.runtimes/tooling-kwjlczpc
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 11:46:16.530
+!MESSAGE  *** 6135 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 11:53:09.331
+!MESSAGE There was a problem loading the effective model of pom file: L/check-in-papi/pom.xml
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com.mycompany:check-in-papi:1.0.0-SNAPSHOT
+[ERROR] 'dependencies.dependency.groupId' for {api.groupId}:check-in-papi:zip:raml with value '{api.groupId}' does not match a valid id pattern. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.WriteSafeDecoratorHandler.loadPom(WriteSafeDecoratorHandler.java:94)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.loadPomContents(PomMuleProjectModel.java:124)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.lambda$11(PomMuleProjectModel.java:693)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.runNotifyingDependencyChanges(PomMuleProjectModel.java:706)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.pomChanged(PomMuleProjectModel.java:692)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.onPomChanged(PomMuleProjectModel.java:159)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:45)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:1)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:200)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.utils.eventbus.EventBus.doFireEvent(EventBus.java:188)
+	at org.mule.tooling.utils.eventbus.EventBus.fireEvent(EventBus.java:169)
+	at org.mule.tooling.core.m2.PomBuilderExtensionProvider.visitResourceDelta(PomBuilderExtensionProvider.java:30)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager$3.run(MuleBuilderExtensionManager.java:85)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager.incrementalBuildWithExtensions(MuleBuilderExtensionManager.java:78)
+	at org.mule.tooling.core.builder.MuleBuilder.incrementalBuild(MuleBuilder.java:166)
+	at org.mule.tooling.core.builder.MuleBuilder.build(MuleBuilder.java:97)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:798)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:219)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:315)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:318)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:370)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:391)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:145)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 11:53:14.266
+!MESSAGE There was a problem loading the effective model of pom file: L/var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/.be0709b6-2393-419b-a5fb-a56cdd631e3c.pom
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.groupId' for {api.groupId}:check-in-papi:zip:raml with value '{api.groupId}' does not match a valid id pattern. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.writeChanges(DefaultPomFileHandler.java:236)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.getPomFileToResolve(MuleMavenClientResolver.java:195)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:158)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 0 2020-04-28 11:53:14.308
+!MESSAGE Artifact resolution
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2020-04-28 11:53:14.308
+!MESSAGE An internal error occurred during: "Downloading check-in-papi project dependencies: {api.groupId}:check-in-papi:1.0.0".
+!STACK 0
+java.lang.RuntimeException: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.groupId' for {api.groupId}:check-in-papi:zip:raml with value '{api.groupId}' does not match a valid id pattern. @ 
+
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:268)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:153)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:136)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:159)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.groupId' for {api.groupId}:check-in-papi:zip:raml with value '{api.groupId}' does not match a valid id pattern. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:266)
+	... 8 more
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 11:53:14.333
+!MESSAGE There was a problem loading the effective model of pom file: L/var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/.65faf593-bc82-47a2-9510-c115b15f8992.pom
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.groupId' for {api.groupId}:check-in-papi:zip:raml with value '{api.groupId}' does not match a valid id pattern. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.writeChanges(DefaultPomFileHandler.java:236)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.getPomFileToResolve(MuleMavenClientResolver.java:195)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:158)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 0 2020-04-28 11:53:14.343
+!MESSAGE Artifact resolution
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2020-04-28 11:53:14.344
+!MESSAGE An internal error occurred during: "Downloading check-in-papi project dependencies: {api.groupId}:check-in-papi:1.0.0".
+!STACK 0
+java.lang.RuntimeException: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.groupId' for {api.groupId}:check-in-papi:zip:raml with value '{api.groupId}' does not match a valid id pattern. @ 
+
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:268)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:153)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:136)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:159)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.groupId' for {api.groupId}:check-in-papi:zip:raml with value '{api.groupId}' does not match a valid id pattern. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:266)
+	... 8 more
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 11:53:28.309
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 11:53:28.315
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 11:53:28.501
+!MESSAGE Starting shell termination command "[kill, -9, 20994]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 11:53:28.524
+!MESSAGE Finished shell termination command "[kill, -9, 20994]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 11:55:27.126
+!MESSAGE  *** 3981 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:03:13.880
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:03:13.886
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:03:14.074
+!MESSAGE Starting shell termination command "[kill, -9, 21916]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:03:14.077
+!MESSAGE Finished shell termination command "[kill, -9, 21916]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 12:03:24.355
+!MESSAGE  *** 4226 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:25.634
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:25.637
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:25.779
+!MESSAGE Starting shell termination command "[kill, -9, 23065]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:25.781
+!MESSAGE Finished shell termination command "[kill, -9, 23065]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 12:05:32.024
+!MESSAGE  *** 3576 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:46.619
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:46.622
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:46.766
+!MESSAGE Starting shell termination command "[kill, -9, 23526]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:05:46.768
+!MESSAGE Finished shell termination command "[kill, -9, 23526]"
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 12:06:11.244
+!MESSAGE There was a problem loading the effective model of pom file: L/check-in-papi/pom.xml
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 3 problems were encountered while building the effective model for com.mycompany:check-in-papi:1.0.0-SNAPSHOT
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.version' for ${api.groupId}:${api.artifactId}:zip:raml must be a valid version but is '${api.version}'. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.WriteSafeDecoratorHandler.loadPom(WriteSafeDecoratorHandler.java:94)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.loadPomContents(PomMuleProjectModel.java:124)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.lambda$11(PomMuleProjectModel.java:693)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.runNotifyingDependencyChanges(PomMuleProjectModel.java:706)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.pomChanged(PomMuleProjectModel.java:692)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.onPomChanged(PomMuleProjectModel.java:159)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:45)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:1)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:200)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.utils.eventbus.EventBus.doFireEvent(EventBus.java:188)
+	at org.mule.tooling.utils.eventbus.EventBus.fireEvent(EventBus.java:169)
+	at org.mule.tooling.core.m2.PomBuilderExtensionProvider.visitResourceDelta(PomBuilderExtensionProvider.java:30)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager$3.run(MuleBuilderExtensionManager.java:85)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager.incrementalBuildWithExtensions(MuleBuilderExtensionManager.java:78)
+	at org.mule.tooling.core.builder.MuleBuilder.incrementalBuild(MuleBuilder.java:166)
+	at org.mule.tooling.core.builder.MuleBuilder.build(MuleBuilder.java:97)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:798)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:219)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:315)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:318)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:370)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:391)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:145)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 12:06:11.762
+!MESSAGE There was a problem loading the effective model of pom file: L/var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/.733fe6c4-511f-41c4-a98f-52abdeabc235.pom
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 3 problems were encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.version' for ${api.groupId}:${api.artifactId}:zip:raml must be a valid version but is '${api.version}'. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.writeChanges(DefaultPomFileHandler.java:236)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.getPomFileToResolve(MuleMavenClientResolver.java:195)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:158)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 0 2020-04-28 12:06:11.797
+!MESSAGE Artifact resolution
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2020-04-28 12:06:11.797
+!MESSAGE An internal error occurred during: "Downloading check-in-papi project dependencies: ${api.groupId}:${api.artifactId}:${api.version}".
+!STACK 0
+java.lang.RuntimeException: org.apache.maven.model.building.ModelBuildingException: 2 problems were encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:268)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:153)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:136)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:159)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 2 problems were encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:266)
+	... 8 more
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 12:06:11.814
+!MESSAGE There was a problem loading the effective model of pom file: L/var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/.3c88139e-1ee5-422d-8b52-44aa0bc56e66.pom
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 3 problems were encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.version' for ${api.groupId}:${api.artifactId}:zip:raml must be a valid version but is '${api.version}'. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.writeChanges(DefaultPomFileHandler.java:236)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.getPomFileToResolve(MuleMavenClientResolver.java:195)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:158)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 0 2020-04-28 12:06:11.822
+!MESSAGE Artifact resolution
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2020-04-28 12:06:11.822
+!MESSAGE An internal error occurred during: "Downloading check-in-papi project dependencies: ${api.groupId}:${api.artifactId}:${api.version}".
+!STACK 0
+java.lang.RuntimeException: org.apache.maven.model.building.ModelBuildingException: 2 problems were encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:268)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:153)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveArtifactDependencies(AetherMavenClient.java:136)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.doResolveDependencies(MuleMavenClientResolver.java:159)
+	at org.mule.tooling.core.m2.internal.MuleMavenClientResolver.resolveDependencies(MuleMavenClientResolver.java:95)
+	at org.mule.tooling.core.module.internal.runner.ResolveTask.doRun(ResolveTask.java:44)
+	at org.mule.tooling.core.module.internal.runner.Task.run(Task.java:65)
+	at org.mule.tooling.core.module.internal.runner.ArtifactResolvingRunner$ArtifactJob.run(ArtifactResolvingRunner.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 2 problems were encountered while building the effective model for com:auxiliary:1.0
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.maven.client.internal.AetherMavenClient.getEffectiveModel(AetherMavenClient.java:266)
+	... 8 more
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 12:08:16.180
+!MESSAGE There was a problem loading the effective model of pom file: L/check-in-papi/pom.xml
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 6 problems were encountered while building the effective model for com.mycompany:check-in-papi:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for :null is missing. @ 
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.version' for ${api.groupId}:${api.artifactId}:zip:raml must be a valid version but is '${api.version}'. @ 
+[ERROR] 'build.plugins.plugin.artifactId' is missing. @ 
+[ERROR] 'build.plugins.plugin.groupId' is missing. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.WriteSafeDecoratorHandler.loadPom(WriteSafeDecoratorHandler.java:94)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.loadPomContents(PomMuleProjectModel.java:124)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.lambda$11(PomMuleProjectModel.java:693)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.runNotifyingDependencyChanges(PomMuleProjectModel.java:706)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.pomChanged(PomMuleProjectModel.java:692)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.onPomChanged(PomMuleProjectModel.java:159)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:45)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:1)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:200)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.utils.eventbus.EventBus.doFireEvent(EventBus.java:188)
+	at org.mule.tooling.utils.eventbus.EventBus.fireEvent(EventBus.java:169)
+	at org.mule.tooling.core.m2.PomBuilderExtensionProvider.visitResourceDelta(PomBuilderExtensionProvider.java:30)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager$3.run(MuleBuilderExtensionManager.java:85)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager.incrementalBuildWithExtensions(MuleBuilderExtensionManager.java:78)
+	at org.mule.tooling.core.builder.MuleBuilder.incrementalBuild(MuleBuilder.java:166)
+	at org.mule.tooling.core.builder.MuleBuilder.build(MuleBuilder.java:97)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:798)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:219)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:315)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:318)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:370)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:391)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:145)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 12:11:09.958
+!MESSAGE There was a problem loading the effective model of pom file: L/check-in-papi/pom.xml
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 3 problems were encountered while building the effective model for com.mycompany:check-in-papi:1.0.0-SNAPSHOT
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.version' for ${api.groupId}:${api.artifactId}:zip:raml must be a valid version but is '${api.version}'. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.WriteSafeDecoratorHandler.loadPom(WriteSafeDecoratorHandler.java:94)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.loadPomContents(PomMuleProjectModel.java:124)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.lambda$11(PomMuleProjectModel.java:693)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.runNotifyingDependencyChanges(PomMuleProjectModel.java:706)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.pomChanged(PomMuleProjectModel.java:692)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.onPomChanged(PomMuleProjectModel.java:159)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:45)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:1)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:200)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.utils.eventbus.EventBus.doFireEvent(EventBus.java:188)
+	at org.mule.tooling.utils.eventbus.EventBus.fireEvent(EventBus.java:169)
+	at org.mule.tooling.core.m2.PomBuilderExtensionProvider.visitResourceDelta(PomBuilderExtensionProvider.java:30)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager$3.run(MuleBuilderExtensionManager.java:85)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager.incrementalBuildWithExtensions(MuleBuilderExtensionManager.java:78)
+	at org.mule.tooling.core.builder.MuleBuilder.incrementalBuild(MuleBuilder.java:166)
+	at org.mule.tooling.core.builder.MuleBuilder.build(MuleBuilder.java:97)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:798)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:219)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:315)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:318)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:370)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:391)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:145)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 12:12:53.387
+!MESSAGE There was a problem loading the effective model of pom file: L/check-in-papi/pom.xml
+Falling back to using the plain unresolved model.
+!STACK 0
+org.apache.maven.model.building.ModelBuildingException: 3 problems were encountered while building the effective model for com.mycompany:check-in-papi:1.0.0-SNAPSHOT
+[ERROR] 'dependencies.dependency.artifactId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.artifactId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.groupId' for ${api.groupId}:${api.artifactId}:zip:raml with value '${api.groupId}' does not match a valid id pattern. @ 
+[ERROR] 'dependencies.dependency.version' for ${api.groupId}:${api.artifactId}:zip:raml must be a valid version but is '${api.version}'. @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:479)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:421)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:411)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:66)
+	at org.mule.tooling.core.m2.internal.MavenModelReader.readModel(MavenModelReader.java:62)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.doReadPomModel(DefaultPomFileHandler.java:301)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.readPomModel(DefaultPomFileHandler.java:286)
+	at org.mule.tooling.core.m2.internal.DefaultPomFileHandler.loadPom(DefaultPomFileHandler.java:247)
+	at org.mule.tooling.core.m2.internal.WriteSafeDecoratorHandler.loadPom(WriteSafeDecoratorHandler.java:94)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.loadPomContents(PomMuleProjectModel.java:124)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.lambda$11(PomMuleProjectModel.java:693)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.runNotifyingDependencyChanges(PomMuleProjectModel.java:706)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.pomChanged(PomMuleProjectModel.java:692)
+	at org.mule.tooling.core.m2.PomMuleProjectModel.onPomChanged(PomMuleProjectModel.java:159)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:45)
+	at org.mule.tooling.core.event.PomChangedEvent.dispatch(PomChangedEvent.java:1)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:200)
+	at org.mule.tooling.utils.eventbus.EventBus$1.call(EventBus.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.utils.eventbus.EventBus.doFireEvent(EventBus.java:188)
+	at org.mule.tooling.utils.eventbus.EventBus.fireEvent(EventBus.java:169)
+	at org.mule.tooling.core.m2.PomBuilderExtensionProvider.visitResourceDelta(PomBuilderExtensionProvider.java:30)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager$3.run(MuleBuilderExtensionManager.java:85)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.mule.tooling.core.builder.MuleBuilderExtensionManager.incrementalBuildWithExtensions(MuleBuilderExtensionManager.java:78)
+	at org.mule.tooling.core.builder.MuleBuilder.incrementalBuild(MuleBuilder.java:166)
+	at org.mule.tooling.core.builder.MuleBuilder.build(MuleBuilder.java:97)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:798)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:219)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:315)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:318)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:370)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:391)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:145)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2020-04-28 12:13:02.410
+!MESSAGE Failed to retrieve rest API. id: ${api.artifactId}
+!STACK 0
+ExternalServiceCallException [statusCode=0, reasonPhrase=null, query={assets(asset:{groupId:"${api.groupId}",assetId:"${api.artifactId}"}){name,type,assetId,groupId,version,classifier,description,runtimeVersion,organizationId,status,attributes{key,value},dependencies{name,type,assetId,groupId,version,classifier,description,runtimeVersion,organizationId,status,attributes{key,value}}}}, response={"data":null,"errors":[{"message":"Resource not found","status":404,"path":["assets"],"locations":[{"line":1,"column":2}]}]}]
+	at org.mule.tooling.exchange.client.ExternalServiceCallException.create(ExternalServiceCallException.java:31)
+	at org.mule.tooling.exchange.client.GraphServiceClient.checkResponse(GraphServiceClient.java:124)
+	at org.mule.tooling.exchange.client.GraphServiceClient.executeQuery(GraphServiceClient.java:103)
+	at org.mule.tooling.exchange.client.GraphServiceClient.search(GraphServiceClient.java:86)
+	at org.mule.tooling.core.model.DependencyToAssetCache.getAssetFromExchange(DependencyToAssetCache.java:63)
+	at org.mule.tooling.core.model.DependencyToAssetCache.lambda$0(DependencyToAssetCache.java:42)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 12:14:14.955
+!MESSAGE  *** 3454 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:14:37.352
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:14:37.355
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:14:37.542
+!MESSAGE Starting shell termination command "[kill, -9, 24716]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:14:37.545
+!MESSAGE Finished shell termination command "[kill, -9, 24716]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 12:18:15.105
+!MESSAGE  *** 4173 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:31:19.565
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:31:19.569
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:31:19.838
+!MESSAGE Starting shell termination command "[kill, -9, 25394]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 12:31:19.840
+!MESSAGE Finished shell termination command "[kill, -9, 25394]"
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-28 12:33:14.475
+!MESSAGE Deleting MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+!SESSION 2020-04-28 12:33:50.756 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/mjones1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/mjones1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-04-28 12:50:30.784
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2020-04-28 12:50:33.272
+!MESSAGE Creating MUnit temporary folder in /var/folders/mh/nbm50jqx7gb4y755t5vg4mlc0000gp/T/munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-28 12:50:40.071
+!MESSAGE Mule Version 4.2.2-hf2, was mapped to Tooling Version 4.2.2-hf2
+
+!ENTRY org.mule.tooling.core 1 0 2020-04-28 12:50:57.804
+!MESSAGE Started tooling v[4.2.2] with timeout [90s] at path:
+/Applications/AnypointStudio.app/Contents/Eclipse/configuration/org.eclipse.osgi/430/data/.runtimes/tooling-kwjlczpc
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 12:57:47.229
+!MESSAGE  *** 6219 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
