@@ -1,56 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-     <modelVersion>4.0.0</modelVersion>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-     <groupId>com.mycompany</groupId>
-     <artifactId>check-in-papi</artifactId>
-     <version>1.0.0-SNAPSHOT</version>
-     <packaging>mule-application</packaging>
-     <name>check-in-papi</name>
+    <groupId>com.mycompany</groupId>
+    <artifactId>check-in-papi</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>mule-application</packaging>
+    <name>check-in-papi</name>
 
-     <parent>
-          <groupId>com.mycompany</groupId>
-          <artifactId>parent-pom</artifactId>
-          <version>1.0.0-SNAPSHOT</version>
-          <relativePath>parent-pom.xml</relativePath>
-     </parent>
+    <parent>
+        <groupId>com.mycompany</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>parent-pom.xml</relativePath>
+    </parent>
 
-     <properties>
+    <properties>
           <!-- Check-in PAPi Properties -->
-          <api.groupId>af6f1673-4a91-43e3-92bc-955b296d66d8</api.groupId>
-          <api.artifactId>check-in-papi</api.artifactId>
-          <api.version>1.0.0</api.version>
-     </properties>
+        <api.groupId>af6f1673-4a91-43e3-92bc-955b296d66d8</api.groupId>
+        <api.artifactId>check-in-papi</api.artifactId>
+        <api.version>1.0.0</api.version>
+    </properties>
 
-     <build>
-          <plugins>
+    <build>
+        <plugins>
                <!-- Mule Maven Plugin -->
-               <plugin>
-                    <groupId>org.mule.tools.maven</groupId>
-                    <artifactId>mule-maven-plugin</artifactId>
-               </plugin>
-          </plugins>
-     </build>
+            <plugin>
+                <groupId>org.mule.tools.maven</groupId>
+                <artifactId>mule-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
-     <dependencies>
-          <dependency>
-               <groupId>${api.groupId}</groupId>
-               <artifactId>${api.artifactId}</artifactId>
-               <version>${api.version}</version>
-               <classifier>raml</classifier>
-               <type>zip</type>
-          </dependency>
-          <dependency>
-               <groupId>org.mule.modules</groupId>
-               <artifactId>mule-apikit-module</artifactId>
-               <classifier>mule-plugin</classifier>
-          </dependency>
-          <dependency>
-               <groupId>org.mule.connectors</groupId>
-               <artifactId>mule-http-connector</artifactId>
-               <classifier>mule-plugin</classifier>
-          </dependency>
-     </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>${api.groupId}</groupId>
+            <artifactId>${api.artifactId}</artifactId>
+            <version>${api.version}</version>
+            <classifier>raml</classifier>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-apikit-module</artifactId>
+            <classifier>mule-plugin</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.mule.connectors</groupId>
+            <artifactId>mule-http-connector</artifactId>
+            <classifier>mule-plugin</classifier>
+        </dependency>
+    </dependencies>
 
 
 </project>
