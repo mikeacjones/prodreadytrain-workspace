@@ -19,7 +19,7 @@
     </parent>
 
     <properties>
-          <!-- Check-in PAPi Properties -->
+        <!-- Check-in PAPi Properties -->
         <api.groupId>af6f1673-4a91-43e3-92bc-955b296d66d8</api.groupId>
         <api.artifactId>check-in-papi</api.artifactId>
         <api.version>1.0.0</api.version>

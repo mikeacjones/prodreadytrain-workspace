@@ -16,6 +16,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <app.runtime>4.2.2-hf2</app.runtime>
+        <app.runtime.semver>4.2.2</app.runtime.semver>
         <mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 
         <resources.plugin.version>3.1.0</resources.plugin.version>

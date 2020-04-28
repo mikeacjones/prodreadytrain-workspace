@@ -1500,3 +1500,18 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/mjone
 
 !ENTRY org.mule.tooling.runtime 1 0 2020-04-28 13:12:11.819
 !MESSAGE Finished shell termination command "[kill, -9, 33272]"
+
+!ENTRY org.mule.tooling.maven 1 0 2020-04-28 13:32:23.722
+!MESSAGE  *** 5107 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 14:17:27.451
+!MESSAGE Starting shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 14:17:27.455
+!MESSAGE Finished shell termination command "[/Applications/AnypointStudio.app/Contents/Eclipse/plugins/org.mule.tooling.server.4.2.2.ee_7.3.5.202004201536/mule/bin/mule, stop]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 14:17:27.640
+!MESSAGE Starting shell termination command "[kill, -9, 38290]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2020-04-28 14:17:27.643
+!MESSAGE Finished shell termination command "[kill, -9, 38290]"
