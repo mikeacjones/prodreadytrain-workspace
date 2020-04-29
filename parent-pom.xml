@@ -15,7 +15,7 @@
         <groupId>com.mycompany</groupId>
         <artifactId>bom</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>bom.xml</relativePath>
+        <relativePath>./bom.xml</relativePath>
     </parent>
 
 

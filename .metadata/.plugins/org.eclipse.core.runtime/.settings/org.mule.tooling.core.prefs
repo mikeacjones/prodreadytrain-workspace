@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+mule_core_plugin_preference_maven_embedded=false
+mule_core_plugin_preference_maven_path=/usr/local/
 org.mule.tooling.core_STUDIO_MAVEN_REPOSITORY_POPULATED=7.4.2.202001311743
 org.mule.tooling.munit.dependencies_STUDIO_MAVEN_REPOSITORY_POPULATED=2.4.2.202003021443
 org.mule.tooling.server.4.2.2.deps_STUDIO_MAVEN_REPOSITORY_POPULATED=7.3.5.202001031809
