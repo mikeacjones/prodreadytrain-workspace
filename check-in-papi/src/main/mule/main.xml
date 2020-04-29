@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mule
+    xmlns:json-logger="http://www.mulesoft.org/schema/mule/json-logger"
     xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
     xmlns="http://www.mulesoft.org/schema/mule/core"
     xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/json-logger http://www.mulesoft.org/schema/mule/json-logger/current/mule-json-logger.xsd">
     <flow
         name="get-by-pnr"
         doc:id="4ca6234b-adcf-4bc2-aed4-38be5e920412">
-        <ee:transform>
+        <json-logger:logger-scope doc:name="Logger scope" doc:id="e2db04ae-e688-4100-98e0-895449d3e2e6" scopeTracePoint="DATA_TRANSFORM_SCOPE" prettyPrint="${logger.prettyPrint}">
+            <ee:transform>
             <ee:message>
                 <ee:set-payload resource="dw/sample-ticket-json.dwl" />
             </ee:message>
         </ee:transform>
+        </json-logger:logger-scope>
     </flow>
     <flow
         name="payment-approval-by-pnr"
         doc:id="d3af522e-3d7c-4238-8209-443216c11dea">
+        <json-logger:logger doc:name="Logger" doc:id="8da4f157-2a68-4710-ba66-cebb34128e2d" config-ref="jLogConfig" message="b1"/>
         <ee:transform>
             <ee:message>
                 <ee:set-payload resource="dw/sample-ticket-json.dwl" />
             </ee:message>
         </ee:transform>
+        <json-logger:logger doc:name="Logger" doc:id="612faec3-1485-4ae9-bb99-68c452ce1585" config-ref="jLogConfig" message="b2"/>
     </flow>
     <flow
         name="check-in-by-pnr"
         doc:id="24e6d598-bf76-4726-b95e-8b7a7999d539">
+        <json-logger:logger doc:name="Logger" doc:id="906f6ac1-65c7-4679-962b-987e69a9f3b8" config-ref="jLogConfig" message="check in start">
+            <json-logger:content ><![CDATA[#[output application/json ---
+{
+	pnr: vars.PNR,
+ 	payload: payload,
+ 	attributes: attributes
+}]]]></json-logger:content>
+        </json-logger:logger>
         <ee:transform>
             <ee:message>
                 <ee:set-payload resource="dw/sample-payment-id-json.dwl" />
             </ee:message>
         </ee:transform>
+        <json-logger:logger doc:name="Logger" doc:id="bd2ba48b-239e-4821-8a1b-71cc2f0e3dbd" config-ref="jLogConfig" message="check in end" tracePoint="END"/>
     </flow>
 </mule>

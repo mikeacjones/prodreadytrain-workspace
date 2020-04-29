@@ -9,3 +9,6 @@ tls:
 
 api:
   id: "16123611"
+  
+logger:
+  prettyPrint: "true"

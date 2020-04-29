@@ -1,0 +1,46 @@
+{
+  "configs": [
+    "error.xml",
+    "global.xml",
+    "api.xml",
+    "main.xml"
+  ],
+  "secureProperties": [
+    "anypoint.platform.client_id",
+    "anypoint.platform.client_secret",
+    "encrypt.key"
+  ],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:check-in-papi:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.2.2-hf2",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "log4j2.xml",
+        "global.xml",
+        "properties-dev.yaml",
+        "main.xml",
+        "properties-dev-secure.yaml",
+        "properties.yaml",
+        "certs/check-in-papi-dev.p12",
+        "certs/check-in-papi-prod.p12",
+        "certs/check-in-papi-test.p12",
+        "error.xml",
+        "properties-qa-secure.yaml",
+        "dw/sample-ticket-json.dwl",
+        "dw/sample-payment-id-json.dwl",
+        "properties-prod.yaml",
+        "api.xml",
+        "properties-prod-secure.yaml",
+        "properties-qa.yaml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

@@ -9,6 +9,3 @@ tls:
     
 api:
   id: "16126138"
-  
-logger:
-  prettyPrint: "false"
